@@ -1,0 +1,108 @@
+<mxfile host="app.diagrams.net" modified="2024-01-16T06:14:30.130Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="Cw-URi1kaubMIsQOfUN8" version="22.1.18" type="github">
+  <diagram name="Design New Feed system" id="-Q-Sq_ZJ5Sb7N86ECvnY">
+    <mxGraphModel dx="2142" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-1" value="Design News Feed System" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="225" y="38" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-2" value="FRs&lt;br&gt;1. Its sort of new bites given to user.&lt;br&gt;2. How sort the news? - Timestamp , relevance&lt;br&gt;3. Do we want to feed them realtime , schedule fashion , once a day?&lt;br&gt;4. Likes , Dislikes sort of system?&lt;br&gt;6. Search ? - P1&lt;br&gt;7. Push based system / Pull based system&lt;br&gt;8. Feed on containing text/ mutilmedia?&lt;br&gt;9 . Edit of feeds is not supported&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;NFRs.&lt;br&gt;1. Availability &amp;gt; Consistency&lt;br&gt;2. Scalability&lt;br&gt;3. Durable&lt;br&gt;4. Latency -&amp;nbsp;&lt;br&gt;5. Disaster Recovery&amp;nbsp;&lt;br&gt;6. Telemetry&lt;br&gt;&lt;br&gt;&lt;br&gt;Estimation&lt;br&gt;1. Storage&lt;br&gt;User Scale - 10mn active users * 5 * 100kb * 5 = 25 Tb&amp;nbsp;&lt;br&gt;News feed - 5 years" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="55" width="390" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-3" value="FRs farmework&lt;br&gt;1. Locatiom" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="590" y="53" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-4" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="620" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="550" as="sourcePoint" />
+            <mxPoint x="10" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-22" value="Load Balacer&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qLE9l8aXLO7DxEU0OKmg-6">
+          <mxGeometry x="0.6503" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-8" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="600" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-9" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="110" y="610" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-10" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="120" y="620" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-11" value="News Feed Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-12" value="HS help cater to inc/decreasing loda of the system" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-45" y="728" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-13" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="880" as="sourcePoint" />
+            <mxPoint x="470" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-15" value="News feed db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="610" y="620" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-16" value="Storage - data storage needs are high.&lt;br&gt;It cannot fit in Relational storage.&lt;br&gt;No-sql&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="710" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-17" value="News feed cache" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.075;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qLE9l8aXLO7DxEU0OKmg-4" target="qLE9l8aXLO7DxEU0OKmg-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="710" as="sourcePoint" />
+            <mxPoint x="390" y="660" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-19" value="http" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qLE9l8aXLO7DxEU0OKmg-18">
+          <mxGeometry x="0.0613" y="8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.03;exitY=0.41;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qLE9l8aXLO7DxEU0OKmg-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="710" as="sourcePoint" />
+            <mxPoint x="300" y="663" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-21" value="select friend_id from friends where user_id = x;&lt;br&gt;select * from news where user_id in (friend_ids) order by time_stamp&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-275" y="943" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-23" value="Fanout workers&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="300" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-24" value="Graph db - User db" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="660" as="sourcePoint" />
+            <mxPoint x="480" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="qLE9l8aXLO7DxEU0OKmg-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="750" as="sourcePoint" />
+            <mxPoint x="410" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qLE9l8aXLO7DxEU0OKmg-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="qLE9l8aXLO7DxEU0OKmg-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="770" as="sourcePoint" />
+            <mxPoint x="230" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
