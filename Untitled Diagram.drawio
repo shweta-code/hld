@@ -1,0 +1,349 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T16:31:49.058Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="4XGN0D8yq1bstJBcQSin" version="22.1.18" type="github" pages="2">
+  <diagram name="Web Crawler" id="itkENivqgTPy2xBvm6J-">
+    <mxGraphModel dx="2142" dy="2269" grid="1" gridSize="11" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1dKefykoYRxyrlQqJmz5-1" value="Designing a Web Crawler" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="8" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-2" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;FRs&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. Crawl public websites&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. Crawl websites for ? - Search , data mining?&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3. Do you want to run crawl in which interval ? Configurable? Freshness of data&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4. Do you want to index? Html content ,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;6. Link you find 404 ? Discard them -&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;7 Cycles&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;5. Retry mechanisms?&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;6. Handle Rate Limiting&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;I missed&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. What diff protocols should we handle? How about ftp links?&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. Roborts.txt - Which links should we exclude?&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. If any url should be prioritized&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-174" y="-7" width="451" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-3" value="&lt;b&gt;Back of the envelope Estimation&lt;/b&gt;&lt;br&gt;1. Scale of data - 1bn ;links, Storage - 100 tb of data&lt;br&gt;2. Throughput / Ingestion scale - 100 links /sec&lt;br&gt;3.&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-253" y="206" width="308" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-4" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;NFrs&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. High Available&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. Highly consistent - Eventually consistent&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3. Durable - Data shoudl not be lost&amp;nbsp; - Cross Geography Replication&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4. Scalable - Increasing load of content avaialble on internet - horizontal scaling&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-395" y="300" width="450" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-6" value="Crawler Session Service" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-7" value="Scheduler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.42;entryY=1.12;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="470" as="sourcePoint" />
+            <mxPoint x="-149.5999999999999" y="537.2" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-9" value="Feed data - from db&lt;br&gt;(initial links)&lt;br&gt;Relational db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="120" y="360" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.073;entryY=0.593;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-6" target="1dKefykoYRxyrlQqJmz5-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="470" as="sourcePoint" />
+            <mxPoint x="240" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-13" value="queue" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-47" y="530" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-14" value="Crawl Workers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-6" target="1dKefykoYRxyrlQqJmz5-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="480" as="sourcePoint" />
+            <mxPoint x="160" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-16" value="Crawl Workers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-17" value="Crawl Workers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-18" value="Crawl Workers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-13" target="1dKefykoYRxyrlQqJmz5-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="480" as="sourcePoint" />
+            <mxPoint x="160" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.56;entryY=1.058;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-14" target="1dKefykoYRxyrlQqJmz5-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="520" as="sourcePoint" />
+            <mxPoint x="160" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-24" value="Scheduler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-25" value="schedule in db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="710" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-27" value="Keep storing unvisited nodes in the db" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="105" y="508" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="640" as="sourcePoint" />
+            <mxPoint x="253" y="836" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-29" value="Put Response in q" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="210" y="708" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-30" value="Response in q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-31" value="Processor Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-32" value="Processor Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="191" y="991" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-33" value="Processor Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="202" y="1002" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-34" value="Processor Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="213" y="1013" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.36;exitY=0.96;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="930" as="sourcePoint" />
+            <mxPoint x="231" y="979" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-36" value="Sanitize the data , Parse content into html, Extract Links,&lt;br&gt;Write it into db with timestamp" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-143" y="1008" width="330" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-37" value="Crawlers will receive message on &lt;br&gt;link they have to crawl" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-28" y="606" width="198" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-38" value="db&lt;br&gt;(Nosql)&lt;br&gt;Content&lt;br&gt;Search use case - Search index" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="231" y="1177" width="198" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-39" value="Could there be multiple instances&lt;br&gt;for a service that can read data from relational database?&lt;br&gt;&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="284" y="184" width="330" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-40" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-34" target="1dKefykoYRxyrlQqJmz5-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="143" y="1227" as="sourcePoint" />
+            <mxPoint x="193" y="1177" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-41" value="link &amp;lt;string&amp;gt;,&lt;br&gt;content &amp;lt;string&amp;gt;,&lt;br&gt;refresh_time &amp;lt;timestamp&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-38" y="1243" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-42" value="Refresh the entire content" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="224" y="1108" width="165" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-43" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="424" y="538" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-44" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="435" y="549" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-45" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="446" y="560" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-46" value="html content" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="457" y="571" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.04;entryY=0.64;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1dKefykoYRxyrlQqJmz5-46" target="1dKefykoYRxyrlQqJmz5-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="143" y="622" as="sourcePoint" />
+            <mxPoint x="193" y="572" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-49" value="rate limiting information &lt;br&gt;for relevant websites" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="281" y="399" width="154" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-50" value="Crawler Session Service" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-209" y="461" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-51" value="Crawler Session Service" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-198" y="472" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-52" value="This data should be replicated.&lt;br&gt;Which pattern to use for replication?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="129" y="300" width="220" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-54" value="What is wrong in the design?&lt;br&gt;1. The service that is reading html is diff from service which is finding links. In practicality, this is not possible." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-616" y="1628" width="605" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1dKefykoYRxyrlQqJmz5-55" value="What I missed?&lt;br&gt;We have not done any optmization on QPS , we can use hash based approach for content to dedupe&lt;br&gt;2. I am missing low on how are we introducing new urls to crawl&lt;br&gt;3. Performance Improvements like DNS Resolver&lt;br&gt;4 Discussion of how to crawl DFS or BFS." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-611" y="1335" width="561" height="88" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dOpypZhSOcodEea85Q-x" name="Auto Complete Suggester">
+    <mxGraphModel dx="2696" dy="569" grid="1" gridSize="11" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--1" value="Design Auto complete suggester for shopping website" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="253" y="30" width="308" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--2" value="FRs&lt;br&gt;1.&amp;nbsp; Auto complete suggestion based on suggestions , Product Names?&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. How many words types before suggesting ? - P0&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3. Suggest on every alphabet click? - P0&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;4. Ranking of suggestions ? - P0&lt;/div&gt;&lt;div style=&quot;&quot;&gt;5. Seasonal suggestions? - P1&lt;/div&gt;&lt;div style=&quot;&quot;&gt;6. Word length limit of suggestions? - P0&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;7 . Location based suggestions? - P1&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-16" y="99" width="396" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--3" value="NFRs&lt;br&gt;1. System should be highly available..&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. Latency - Low of order of ms.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3. Throughput High - Burst of requests&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4. Rate Limited&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;5. Scalable - Add more products&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;6. Disaster Recovery&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;7. telemetry&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-16" y="281" width="231" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--4" value="Scale&lt;br&gt;1. 10k of products&amp;nbsp; - 10k of string - 500 Mb - in memory&lt;br&gt;2. User scale - 10m DAU users * 10 searches * 10 = ~1000 queries / sec" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="451" width="407" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--5" value="Features&lt;br&gt;1.. Low latency&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2.. Scalability&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3.. Read heavy system&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-2" y="559" width="143" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--6" value="API spec&lt;br&gt;1. GET /suggestions/{prefix}?noOfSuggestions=5,sort=relevance&lt;br&gt;2. POST /suggestions/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-156" y="657" width="374" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--7" value="API Gateway&lt;br&gt;&lt;br&gt;(Load Balancing.&lt;br&gt;Auth&lt;br&gt;)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="99" y="825" width="124" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--8" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="846" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--9" value="Suggestion Server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="286" y="825" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--10" value="Suggestion Server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="297" y="836" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--11" value="Suggestion Server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="308" y="847" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--12" value="Suggestion Server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="319" y="858" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--14" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="484" y="1155" as="sourcePoint" />
+            <mxPoint x="484" y="682" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--16" value="Search Index like solution / Trie in a VM" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="594" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--17" value="Product&lt;br&gt;Db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="605" y="1034" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="8aNyacZ4Gxc3C8pPDse--8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="352" y="908" as="sourcePoint" />
+            <mxPoint x="88" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--20" value="htpp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--18">
+          <mxGeometry x="-0.1926" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--21" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--18">
+          <mxGeometry x="-0.0946" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--22" value="http" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--18">
+          <mxGeometry x="-0.131" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.056;exitY=0.46;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8aNyacZ4Gxc3C8pPDse--7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="352" y="908" as="sourcePoint" />
+            <mxPoint x="275" y="882" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--23" value="Read Path" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="213" y="855" width="77" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--24" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.08;entryY=0.747;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="8aNyacZ4Gxc3C8pPDse--16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="407" y="902" as="sourcePoint" />
+            <mxPoint x="402" y="858" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--25" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.007;exitY=0.365;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8aNyacZ4Gxc3C8pPDse--29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="352" y="1078" as="sourcePoint" />
+            <mxPoint x="594" y="1078" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--26" value="Updates to product db" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--25">
+          <mxGeometry x="-0.1521" y="2" relative="1" as="geometry">
+            <mxPoint x="70" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--31" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--25">
+          <mxGeometry x="-0.7846" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.153;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8aNyacZ4Gxc3C8pPDse--17" target="8aNyacZ4Gxc3C8pPDse--16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="352" y="1018" as="sourcePoint" />
+            <mxPoint x="402" y="968" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--28" value="Synchronously update the suggestion storage&lt;br&gt;eith failover emchanism" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--27">
+          <mxGeometry x="0.0792" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--29" value="Product Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="143" y="1034" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--30" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.067;exitY=0.88;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8aNyacZ4Gxc3C8pPDse--29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="312" y="999" as="sourcePoint" />
+            <mxPoint x="362" y="949" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--32" value="2 - Post suggestion to Search Index" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--30">
+          <mxGeometry x="-0.827" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--33" value="1 - Update Product db" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8aNyacZ4Gxc3C8pPDse--30">
+          <mxGeometry x="-0.4618" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--34" value="mama e-&amp;gt; mama earth oil&lt;br&gt;mam earth shampoo&lt;br&gt;mama earth conditioner" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-18" y="1251" width="165" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--37" value="&quot;&quot;&lt;br&gt;apt - 50&lt;br&gt;app -37" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="257" y="1342" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--38" value="p -&amp;nbsp;&lt;br&gt;apt - 50&lt;br&gt;app -37" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="78" y="1507" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--39" value="c -&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="377" y="1408" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--40" value="b -&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="253" y="1419" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--41" value="a -&amp;nbsp;&lt;br&gt;&lt;br&gt;apt - 50&lt;br&gt;app - 37&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="147" y="1408" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--42" value="p -&amp;nbsp;&lt;br&gt;app - 37" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="1606" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--43" value="t -&amp;nbsp;&lt;br&gt;apt - 50" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="131" y="1606" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--44" value="&quot;&quot; -&amp;nbsp; 30" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-64" y="1705" width="84" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--45" value="&quot;&quot; - 35" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="99" y="1705" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--46" value="apt - 50&lt;br&gt;app - 37&lt;br&gt;bat - 45" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="31" y="1911" width="66" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="8aNyacZ4Gxc3C8pPDse--47" value="Don&#39;t know&lt;br&gt;1. What exactly to do for highly concurrent systems?&lt;br&gt;This is not a really highly concurrent system. It is rather a system that has high QPS needs.&lt;br&gt;For high QPS needs, Using GET protocol and cache control headers, browser can cache auto complete suggestions and&amp;nbsp;&lt;br&gt;make low latency requests.&lt;br&gt;&lt;br&gt;2. How to tune ES for read heaviness? - ES is not rightly set for auto complete type of use cases.&amp;nbsp;&lt;br&gt;Trie is the structure we can use and store it in in ways as mentioned in Alex Xu book." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="191" y="1653" width="671" height="132" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
