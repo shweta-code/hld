@@ -1,0 +1,226 @@
+<mxfile host="app.diagrams.net" modified="2024-01-17T05:09:30.837Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ytRD11w2JKLZphpezJ6H" version="22.1.19" type="github">
+  <diagram name="Google Map - Google Interview" id="y6HgzmD7EgRz7x9Fr-yb">
+    <mxGraphModel dx="875" dy="464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-2" value="&lt;p style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline;&quot;&gt;Design a backend for something like Google Maps. Take two (latitude, longitude) pairs and return a route between those two points. Do this within several hundred milliseconds.&lt;/span&gt;&lt;p&gt;&lt;/p&gt;&lt;span id=&quot;docs-internal-guid-04b0f70b-7fff-07ac-995a-79241ebd6009&quot;&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="53" width="1160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-3" value="Functional Requirements&lt;br&gt;1. Idenitfy route between two points (given lat ,long) pair. - For cars&lt;br&gt;2. Assume You know roads. intersections.speed limit.&lt;br&gt;3. As a by product, how long it is going to take , should be the fastest route.&amp;nbsp;&lt;br&gt;4. Traffic to be taken into consideration.&lt;br&gt;5. Cross country routes should be covered.&lt;br&gt;&lt;br&gt;&lt;br&gt;NFRs&lt;br&gt;1. SLA - 100 ms&lt;br&gt;2. Availability.&lt;br&gt;3. Best effort consistency. - Want approximately the best&lt;br&gt;4.&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Scale&lt;br&gt;1. Global app&lt;br&gt;2. DAU - ~100mn&lt;br&gt;3. QPS - 100mn * 2 = 200mn queries /day = ~200 queries /sec&lt;br&gt;4.&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="145" width="430" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-5" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="750" as="sourcePoint" />
+            <mxPoint x="240" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="690" as="sourcePoint" />
+            <mxPoint x="460" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-7" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="840" as="sourcePoint" />
+            <mxPoint x="400" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="830" />
+              <mxPoint x="380" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-17" value="D" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-7">
+          <mxGeometry x="0.4137" y="-8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-8" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="800" as="sourcePoint" />
+            <mxPoint x="440" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-14" value="C" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-8">
+          <mxGeometry x="0.5279" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-9" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="880" as="sourcePoint" />
+            <mxPoint x="320" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-10" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="840" as="sourcePoint" />
+            <mxPoint x="400" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="840" />
+              <mxPoint x="220" y="730" />
+              <mxPoint x="380" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-11" value="A" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-10">
+          <mxGeometry x="-0.8148" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-13" value="B" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-10">
+          <mxGeometry x="-0.2604" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-15" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-10">
+          <mxGeometry x="0.2752" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-16" value="D" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-10">
+          <mxGeometry x="-0.1981" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-12" value="Grid G2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="375" y="828" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-18" value="source" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="838" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-19" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1120" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-20" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="1300" as="sourcePoint" />
+            <mxPoint x="200" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-21" value="LB&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3PPwsIfqnmVVTgsJotmw-20">
+          <mxGeometry x="-0.7437" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-22" value="Route FInding Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="260" y="1070" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-23" value="Route FInding Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1080" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-24" value="Route FInding Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1090" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.085;entryY=0.788;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3PPwsIfqnmVVTgsJotmw-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="1160" as="sourcePoint" />
+            <mxPoint x="430" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-26" value="http" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1118" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-27" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="1290" as="sourcePoint" />
+            <mxPoint x="520" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-28" value="data Layer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1298" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-29" value="Graph based db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1068" width="130" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-30" value="grid3:{&lt;br&gt;&lt;br&gt;&quot;grid1&quot; :{&lt;br&gt;&quot;isRoutePossible&quot;: true,&lt;br&gt;&quot;entryPoint&quot;:[],&lt;br&gt;&quot;exitPoint&quot;:[]&lt;br&gt;}&lt;br&gt;,&lt;br&gt;&quot;grid2&quot;:&lt;br&gt;&lt;br&gt;&lt;br&gt;}" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="455" y="1348" width="150" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-31" value="API&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1208" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="3PPwsIfqnmVVTgsJotmw-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="1300" as="sourcePoint" />
+            <mxPoint x="540" y="1210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="1200" />
+              <mxPoint x="550" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-33" value="Traffic Information&lt;br&gt;Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="410" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.188;entryY=1.021;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3PPwsIfqnmVVTgsJotmw-24" target="3PPwsIfqnmVVTgsJotmw-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="1180" as="sourcePoint" />
+            <mxPoint x="410" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-35" value="Cache" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1168" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-36" value="100*100m = 50k * 50k grids* 12bytes = 50k * 50*12 kb ~240 GB of data&lt;br&gt;&lt;br&gt;~2 - 10TB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="191" y="1613" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-37" value="Consistent Hashing to shard and replicate&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="595" y="1248" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-38" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.044;entryY=0.593;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3PPwsIfqnmVVTgsJotmw-24" target="3PPwsIfqnmVVTgsJotmw-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="1130" as="sourcePoint" />
+            <mxPoint x="490" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-40" value="Grid to grid route information" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1228" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-41" value="Read Path" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="1108" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-44" value="Read Path" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1148" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-45" value="Background Process" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1870" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-47" value="Map&amp;nbsp;&lt;br&gt;Storage" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1870" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-48" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.058;exitY=0.454;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3PPwsIfqnmVVTgsJotmw-47" target="3PPwsIfqnmVVTgsJotmw-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1930" as="sourcePoint" />
+            <mxPoint x="450" y="1880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-50" value="Background Process" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1870" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-51" value="Scheduled" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="295" y="2020" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-52" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="3PPwsIfqnmVVTgsJotmw-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="2010" as="sourcePoint" />
+            <mxPoint x="450" y="1880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-53" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="1930" as="sourcePoint" />
+            <mxPoint x="570" y="1900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-54" value="Graph db above" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="595" y="1870" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3PPwsIfqnmVVTgsJotmw-55" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="155" y="1748" width="50" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
