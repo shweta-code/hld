@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-27T14:55:51.771Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="UpYaxifvrUcS_ar722BB" version="24.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-30T07:07:24.585Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="VwsI9jnu-hJAYm6UeBB1" version="24.2.0" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1002" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -46,7 +46,7 @@
           <mxGeometry x="1" y="250" width="280" height="30" as="geometry" />
         </mxCell>
         <mxCell id="m6uwBS9xgvOjHdItZlUL-36" value="Inventory" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
-          <mxGeometry x="450" y="280" width="300" height="250" as="geometry" />
+          <mxGeometry x="450" y="279" width="325" height="291" as="geometry" />
         </mxCell>
         <mxCell id="m6uwBS9xgvOjHdItZlUL-38" value="id BIGINT &lt;b&gt;primary_key&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="m6uwBS9xgvOjHdItZlUL-36" vertex="1">
           <mxGeometry y="30" width="280" height="30" as="geometry" />
@@ -76,6 +76,12 @@
               <mxPoint x="332.79999999999995" y="70" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="7aomlaTJVfskxxxe4qS9-1" value="owner_id INT&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="m6uwBS9xgvOjHdItZlUL-36">
+          <mxGeometry y="210" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7aomlaTJVfskxxxe4qS9-2" value="FOREIGN KEY (owner_id&amp;nbsp;) REFERENCES User(id)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="m6uwBS9xgvOjHdItZlUL-36">
+          <mxGeometry x="-5" y="251" width="330" height="30" as="geometry" />
         </mxCell>
         <mxCell id="m6uwBS9xgvOjHdItZlUL-46" value="ExchangeRequest" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
           <mxGeometry x="450" y="620" width="350" height="430" as="geometry" />
@@ -166,7 +172,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yyBVmceRX0PXl4SYSAtz-1" value="status varchar(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="m6uwBS9xgvOjHdItZlUL-65">
+        <mxCell id="yyBVmceRX0PXl4SYSAtz-1" value="status varchar(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="m6uwBS9xgvOjHdItZlUL-65" vertex="1">
           <mxGeometry y="240" width="380" height="30" as="geometry" />
         </mxCell>
         <mxCell id="m6uwBS9xgvOjHdItZlUL-88" value="Category" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
