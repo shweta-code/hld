@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-11T13:33:20.895Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="dPtAdTYWEXoa6wejNBxe" version="24.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-04-11T15:34:43.217Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="PkIt34Q-2enWcQVwbtP-" version="24.2.1" type="github" pages="3">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Db schema">
     <mxGraphModel dx="1002" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -560,7 +560,7 @@
           <mxGeometry x="470" y="390" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KfSnozbk1s6IsMWBgW0B-18" value="LB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="370" width="20" height="140" as="geometry" />
+          <mxGeometry x="230" y="575" width="20" height="140" as="geometry" />
         </mxCell>
         <mxCell id="KfSnozbk1s6IsMWBgW0B-20" value="Elastic Serach Cluster&lt;div&gt;for full text search&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="370" y="390" width="80" height="80" as="geometry" />
@@ -572,10 +572,55 @@
           <mxGeometry x="120" y="400" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KfSnozbk1s6IsMWBgW0B-28" value="Notification Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="630" y="650" width="80" height="80" as="geometry" />
+          <mxGeometry x="690" y="635" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="KfSnozbk1s6IsMWBgW0B-30" value="Request Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="280" y="580" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-31" value="User&lt;div&gt;Sign Up/ Sign In/ Verification&lt;/div&gt;" style="shape=xor;whiteSpace=wrap;html=1;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="140" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-32" value="User&lt;div&gt;db(mysql cluster)&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="720" y="100" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-33" value="User&lt;div&gt;Service&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="827" y="150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-34" value="User Rewards db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="770" y="495" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-36" value="User Rewards&lt;div&gt;Service&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="890" y="500" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-37" value="User Rewards&lt;div&gt;Consumer&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="670" y="495" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-38" value="Request db(sql)&lt;br&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="400" y="590" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-39" value="LB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="380" width="20" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-40" value="Archival Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="500" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-41" value="CDN&lt;div&gt;For images of items&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="390" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-42" value="DC1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-43" value="DC2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-44" value="DC3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1310" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-45" value="DC4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1310" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KfSnozbk1s6IsMWBgW0B-47" value="Topology&amp;nbsp;&lt;br&gt;1.For different regions, we can make respective datacenters as primary.&amp;nbsp;&lt;div&gt;2. Primary for a region will be replicated to secondary datacenters in near real time.&lt;/div&gt;&lt;div&gt;3. This strategy can&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1270" width="430" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
